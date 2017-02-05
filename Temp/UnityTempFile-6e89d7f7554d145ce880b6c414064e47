@@ -1,0 +1,131 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:'Temp/Assembly-CSharp.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll'
+-r:'Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll'
+-r:'Assets/Uni2D/Dlls/Uni2DLab.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_5_0
+-define:UNITY_5_5
+-define:UNITY_5
+-define:UNITY_64
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_SCRIPTING_NEW_CSHARP_COMPILER
+-define:UNITY_STANDALONE_OSX
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_VIDEO
+-define:ENABLE_VR
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+-define:UNITY_TEAM_LICENSE
+-define:CROSS_PLATFORM_INPUT
+'Assets/CharacterPack/Sample/Sample.cs'
+'Assets/DarkWorld/Scripts/BGScroller.cs'
+'Assets/DarkWorld/Scripts/EnemyAttack.cs'
+'Assets/DarkWorld/Scripts/EnemyController.cs'
+'Assets/DarkWorld/Scripts/EnemyHealth.cs'
+'Assets/DarkWorld/Scripts/Escape.cs'
+'Assets/DarkWorld/Scripts/FacingRight.cs'
+'Assets/DarkWorld/Scripts/PlayerController.cs'
+'Assets/DarkWorld/Scripts/PlayerHealth.cs'
+'Assets/ExampleControl.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationGetFrameIndex.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationGetFrameRate.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationGetNormalizedTime.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationGetSpeed.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationGetTime.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationPause.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationPlayByIndex.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationPlayByName.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationPlayCurrent.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationResume.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationSetFrameIndex.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationSetFrameRate.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationSetNormalizedTime.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationSetSpeed.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationSetTime.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationSetWrapMode.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationStop.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationWatchEndEvent.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationWatchFrameEvent.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Animation/Uni2DSpriteAnimationWatchFrameEventByName.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteGetIsKinematic.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteGetIsTrigger.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteGetSortingLayerID.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteGetSortingLayerName.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteGetSortingOrder.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteGetVertexColor.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteSetIsKinematic.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteSetIsTrigger.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteSetSortingLayerID.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteSetSortingLayerName.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteSetSortingOrder.cs'
+'Assets/Uni2D/PlayMaker Custom Actions/Uni2D/Sprite/Uni2DSpriteSetVertexColor.cs'
+'Assets/Uni2D/Samples/Sprite Animation Viewer/Scripts/SpriteAnimationViewer.cs'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/UnityScript.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll'
+-sdk:unity
