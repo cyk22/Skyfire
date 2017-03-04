@@ -1,11 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{55AD5BD7-46C9-5011-147C-0B165A796F10}") = "2d platformer", "Assembly-CSharp-firstpass.csproj", "{BC32106D-BA31-1FDD-C34C-DDA62CD53C78}"
-EndProject
 Project("{55AD5BD7-46C9-5011-147C-0B165A796F10}") = "2d platformer", "Assembly-CSharp.csproj", "{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}"
-EndProject
-Project("{55AD5BD7-46C9-5011-147C-0B165A796F10}") = "2d platformer", "Assembly-CSharp-Editor-firstpass.csproj", "{7F588DAB-5F16-37A4-EFFF-26A2EC564866}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BC32106D-BA31-1FDD-C34C-DDA62CD53C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC32106D-BA31-1FDD-C34C-DDA62CD53C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC32106D-BA31-1FDD-C34C-DDA62CD53C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC32106D-BA31-1FDD-C34C-DDA62CD53C78}.Release|Any CPU.Build.0 = Release|Any CPU
 		{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F588DAB-5F16-37A4-EFFF-26A2EC564866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F588DAB-5F16-37A4-EFFF-26A2EC564866}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F588DAB-5F16-37A4-EFFF-26A2EC564866}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F588DAB-5F16-37A4-EFFF-26A2EC564866}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

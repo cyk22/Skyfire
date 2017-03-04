@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float maxSpeed=10f;
 	bool facingRight=true;
-
+	GameObject player;
 
 	Animator anim;
 
@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 	
 	// Update is called once per frame
@@ -21,28 +22,31 @@ public class PlayerController : MonoBehaviour {
 
 		float move = Input.GetAxis ("Horizontal");
 
-		anim.SetFloat ("Speed", Mathf.Abs (move));
+		//anim.SetFloat ("Speed", Mathf.Abs (move));
 
 		GetComponent<Rigidbody2D>().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+		if (Mathf.Abs(move) > 0.01) {
+			anim.SetBool ("Walk", true);
+			anim.SetBool ("Idle", false);
+		} else {
+			anim.SetBool ("Idle", true);
+			anim.SetBool ("Walk", false);
+		}
 
 		if (move > 0 && !facingRight) {
 			Flip ();
 		} else if(move <0 && facingRight){
 			Flip ();
 		}
-
-		//if (GetComponent<Rigidbody2D>().position.x <= -6.5f) {
-		//	GetComponent<Rigidbody2D>().position = new Vector2(-6.5f, GetComponent<Rigidbody2D>().position.y);
-		//} else if (GetComponent<Rigidbody2D>().position.x >= 11f) {
-		//	GetComponent<Rigidbody2D>().position = new Vector2(11f, GetComponent<Rigidbody2D>().position.y);
-		//}
+			
 
 	}
 
 	void Flip()
 	{
 		facingRight = !facingRight;
-		Vector2 theScale = transform.localScale;
+		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}

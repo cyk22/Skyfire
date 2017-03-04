@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/DarkWorld/level1.unity
+- path: Assets/DarkWorld/TowerDefence.unity
   isLoaded: 1
   isActive: 1

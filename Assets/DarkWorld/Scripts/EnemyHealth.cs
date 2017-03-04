@@ -1,55 +1,44 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-	public int startingHealth = 100;
-	public int currentHealth;
-	public float sinkSpeed = 2.5f;
-	public int scoreValue = 10;
-	public AudioClip deathClip;
-
+	public int startingHealth = 10;
+	public int enemyCurrentHealth;
+	public GameObject enemyHealthBar;
 
 	Animator anim;
-	AudioSource enemyAudio;
-	ParticleSystem hitParticles;
-	CapsuleCollider capsuleCollider;
 	bool isDead;
-	bool isSinking;
+
 
 
 	void Awake ()
 	{
 		anim = GetComponent <Animator> ();
-		enemyAudio = GetComponent <AudioSource> ();
-		hitParticles = GetComponentInChildren <ParticleSystem> ();
-		capsuleCollider = GetComponent <CapsuleCollider> ();
-
-		currentHealth = startingHealth;
+		enemyCurrentHealth = startingHealth;
 	}
 
 
 	void Update ()
 	{
-		if(isSinking)
-		{
-			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
-		}
+		
 	}
 
 
-	public void TakeDamage (int amount, Vector3 hitPoint)
+	public void eTakeDamage (int amount)
 	{
 		if(isDead)
 			return;
 
-		enemyAudio.Play ();
+		enemyCurrentHealth -= amount;
 
-		currentHealth -= amount;
+		//EnemyHealthSlider.value = enemyCurrentHealth;
 
-		hitParticles.transform.position = hitPoint;
-		hitParticles.Play();
+		float calHealth = enemyCurrentHealth / startingHealth;
 
-		if(currentHealth <= 0)
+		SetBar (calHealth);
+
+		if(enemyCurrentHealth <= 0 && isDead!=true)
 		{
 			Death ();
 		}
@@ -59,22 +48,14 @@ public class EnemyHealth : MonoBehaviour
 	void Death ()
 	{
 		isDead = true;
-
-		capsuleCollider.isTrigger = true;
-
-		anim.SetTrigger ("Dead");
-
-		enemyAudio.clip = deathClip;
-		enemyAudio.Play ();
+		anim.SetBool("Dead",true);
 	}
 
-
-	public void StartSinking ()
+	public void SetBar(float myHealth)
 	{
-		GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
-		GetComponent <Rigidbody> ().isKinematic = true;
-		isSinking = true;
-		//ScoreManager.score += scoreValue;
-		Destroy (gameObject, 2f);
+		enemyHealthBar.transform.localScale = new Vector3 (myHealth, enemyHealthBar.transform.localScale.y, enemyHealthBar.transform.localScale.z);
 	}
+
+
+
 }

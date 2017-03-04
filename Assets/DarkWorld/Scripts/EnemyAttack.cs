@@ -6,10 +6,12 @@ public class EnemyAttack : MonoBehaviour {
 
 	public float timeBetweenAttacks = 0.5f;
 	public int attackDamage=10;
+	public float playerEnemyDistance;
 
 
 	Animator anim;
 	GameObject player;
+	GameObject enemy;
 	PlayerHealth playerHealth;  //Reference to player's health
 	EnemyHealth enemyHealth;   //Reference to enemy's health
 	bool playerInRange;
@@ -17,31 +19,30 @@ public class EnemyAttack : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		playerEnemyDistance = 2f;
 		player = GameObject.FindGameObjectWithTag ("Player");
+		enemy = this.gameObject;
 		playerHealth = player.GetComponent<PlayerHealth> ();
 		enemyHealth = GetComponent<EnemyHealth>();
 		anim = GetComponent<Animator> ();
 	}
 
 
-	void OnTriggerEnter(Collider other)
+	void PlayerInSight()
 	{
+		float dis = Mathf.Abs(player.transform.position.x - enemy.transform.position.x);
 		//if the entering collider is the player
-		if (other.gameObject == player) 
+		if (dis<=playerEnemyDistance) 
 		{
 			//The player is in range
 			playerInRange=true;
 
+		}else{
+			playerInRange=false;
 		}
 	}
 
-	void OnTriggerExit(Collider other)
-	{
-		if (other.gameObject == player) 
-		{
-			playerInRange = false;
-		}
-	}
+
 
 
 	// Update is called once per frame
@@ -49,15 +50,17 @@ public class EnemyAttack : MonoBehaviour {
 		//Add the time since Update was last called to the timer
 		timer += Time.deltaTime;
 
+		PlayerInSight ();
+
 		//if the timer exceeds the time between attacks, the player is in range and this enemy is alive
-		if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0) 
+		if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.enemyCurrentHealth > 0) 
 		{
 			Attack ();
 		}
 
 		if (playerHealth.currentHealth <= 0) 
 		{
-			anim.SetTrigger ("playerDead");
+			anim.SetTrigger ("Idle");
 		}
 	}
 

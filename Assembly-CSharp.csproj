@@ -47,16 +47,27 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CharacterPack\Sample\Sample.cs" />
-     <Compile Include="Assets\DarkWorld\Scripts\BGScroller.cs" />
+     <Compile Include="Assets\DarkWorld\Scripts\ArcherControl.cs" />
+     <Compile Include="Assets\DarkWorld\Scripts\Draggable.cs" />
+     <Compile Include="Assets\DarkWorld\Scripts\Enemy.cs" />
      <Compile Include="Assets\DarkWorld\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\DarkWorld\Scripts\EnemyController.cs" />
      <Compile Include="Assets\DarkWorld\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\DarkWorld\Scripts\Escape.cs" />
+     <Compile Include="Assets\DarkWorld\Scripts\Failed.cs" />
+     <Compile Include="Assets\DarkWorld\Scripts\Fighter.cs" />
+     <Compile Include="Assets\DarkWorld\Scripts\PlayerAttack.cs" />
      <Compile Include="Assets\DarkWorld\Scripts\PlayerController.cs" />
      <Compile Include="Assets\DarkWorld\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\DarkWorld\Scripts\WizardControl.cs" />
      <Compile Include="Assets\ExampleControl.cs" />
+     <Compile Include="Assets\SimpleDragAndDrop\Scripts\DragAndDropCell.cs" />
+     <Compile Include="Assets\SimpleDragAndDrop\Scripts\DragAndDropItem.cs" />
+     <Compile Include="Assets\SimpleDragAndDrop\Scripts\DummyControlUnit.cs" />
      <None Include="Assets\Readme.txt" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -72,13 +83,12 @@
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{BC32106D-BA31-1FDD-C34C-DDA62CD53C78}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

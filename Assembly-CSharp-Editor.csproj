@@ -46,13 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Uni2D\Editor\ParallaxLayerInspector.cs" />
-     <Compile Include="Assets\Uni2D\Editor\Uni2DAnimationClipInspector.cs" />
-     <Compile Include="Assets\Uni2D\Editor\Uni2DAssetTableInspector.cs" />
-     <Compile Include="Assets\Uni2D\Editor\Uni2DSpriteInspector.cs" />
-     <Compile Include="Assets\Uni2D\Editor\Uni2DTextureAtlasInspector.cs" />
+     <Compile Include="Assets\UniArt.ModularNaturalEnvironment\editor\ParallaxLayerInspector.cs" />
      <None Include="Assets\Readme.txt" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -101,15 +96,16 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
- <Reference Include="Uni2DLab">
- <HintPath>/Users/Shared/Unity/2d platformer/Assets/Uni2D/Dlls/Uni2DLab.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

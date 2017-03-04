@@ -5,37 +5,39 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public int startingHealth=100;
+	public int startingHealth=5;
 	public int currentHealth;
-	public Slider PlayerHealthSlider;
-	public ImagePosition damageImage;
-	public float flashSpeed;
-	public Color flashColor = new Color (1f, 0f, 0f, 0.1f);
+	public GameObject PlayerHealthBar;
+
 
 
 	Animator anim;
-	//PlayerMovement playerMovement;   //Reference to the Animator component
-	//PlayerShooting playerShooting;  //Reference to the PlayerShotting script
+	GameObject enemy;
+	PlayerAttack playerAttack;   //Reference to the Animator component
+	EnemyAttack enemyAttack;  //Reference to the PlayerShotting script
+	PlayerHealth playerHealth;
+	PlayerController playerController;
 
-	Escape escape;
-	Animator escapeAnim;
-
-	bool isDead;
+	bool isDead=false;
 	bool damaged;
 
 
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator> ();
 		currentHealth = startingHealth;
-		//escapeAnim = GetComponent<Escape>;
+		//enemy = GameObject.FindGameObjectsWithTag ("Enemy");
+		playerHealth = GetComponent<PlayerHealth> ();
+		playerAttack = GetComponent<PlayerAttack> ();
+		enemyAttack = enemy.GetComponent<EnemyAttack> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (currentHealth <= 0) 
-		{
-			escapeAnim.SetBool ("Failed", true);
-		}
+
+
+
+
 	}
 
 	public void TakeDamage(int amount)
@@ -47,9 +49,9 @@ public class PlayerHealth : MonoBehaviour {
 		currentHealth -=amount;
 
 		//Set the health bar's value to the current health
-		PlayerHealthSlider.value=currentHealth;
+		//PlayerHealthSlider.value=currentHealth;
 
-		if(currentHealth<=0 && !isDead)
+		if(currentHealth<=0 && isDead!=true)
 		{
 			Death();
 		}
@@ -64,10 +66,15 @@ public class PlayerHealth : MonoBehaviour {
 		//PlayerShooting.DisableEffects();
 
 		//Tell the animator that the player is dead
-		anim.SetTrigger("Die");
+		anim.SetBool("Dead",true);
+//		anim.SetBool ("Idle", false);
+//		anim.SetBool ("Walk", false);
+//		anim.SetBool ("Attack", false);
 
-		//playerMovement.enabled = false;
-		//PlayerShooting.enabled = false;
+//		playerAttack.enabled = false;
+//		enemyAttack.enabled = false;
+//		playerHealth.enabled = false;
+//		playerController.enabled = false;
 
 	}
 }
